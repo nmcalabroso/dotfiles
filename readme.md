@@ -1,3 +1,3 @@
-#dotfiles
+# dotfiles
 
-##Personal customization for my current operating system
+## Personal customization for my current operating system
