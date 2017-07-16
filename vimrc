@@ -1,6 +1,7 @@
 execute pathogen#infect()
 
 " General
+filetype plugin on
 set number
 set linebreak
 set showbreak=+++
@@ -29,15 +30,12 @@ let g:airline_solarized_bg='dark'
 let g:airline_powerline_fonts=1
 
 " NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
 " Functions
 function! TrimWhiteSpace()
-  %s/\s\+$//e
+  :%s/\s\+$//e
 endfunction
 
 " Shortcuts
@@ -45,7 +43,8 @@ map <C-\> :NERDTreeToggle<CR>
 map <S-l> :tabn<CR>
 map <S-h> :tabp<CR>
 map <S-k> :tabnew<CR>
-map <F2> :!mix test<CR>
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
 
 " Triggers
 autocmd BufWritePre * :call TrimWhiteSpace()
@@ -60,9 +59,12 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_elixir_checkers=['elixir']
 let g:syntastic_enable_elixir_checker=1
+let g:syntastic_html_checkers=['']
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_max_files=0
+
