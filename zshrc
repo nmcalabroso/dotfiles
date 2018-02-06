@@ -1,21 +1,24 @@
-export ZSH=/Users/neilcalabroso/.oh-my-zsh
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export ZSH=/Users/ncalabroso/.oh-my-zsh
 
 ZSH_THEME="agnoster"
 
-plugins=(git docker ruby osx zsh-nvm)
+HYPHEN_INSENSITIVE="true"
+
+ENABLE_CORRECTION="true"
+
+plugins=(
+  git
+  osx
+  ruby
+  elixir
+)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.dotfiles/mix_autocomplete.zsh
 
-# User configuration
 export LANG=en_US.UTF-8
 export EDITOR='vim'
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-source ~/.iterm2_shell_integration.`basename $SHELL`
-
-export PATH=$PATH:/opt/arcanist/arcanist/bin
-
 export PATH=$PATH:~/.rbenv/shims
 
 # Alias
@@ -23,10 +26,15 @@ alias v=vim
 alias gs="git status"
 alias gca="git commit --amend"
 alias gr="git reset --hard HEAD~"
-alias diff="arc diff HEAD~"
-alias patch="arc patch --nobranch"
-
+alias gp="git pull"
+alias gcl="git clone"
+alias tf="terraform"
+alias sz="source ~/.zshrc"
+alias vz="vim ~/.zshrc"
 
 # Rbenv
 eval "$(rbenv init -)"
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
