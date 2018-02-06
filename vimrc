@@ -21,6 +21,7 @@ set undolevels=1000
 set backspace=indent,eol,start
 
 " Theme
+syntax enable
 set background=dark
 colorscheme solarized
 
