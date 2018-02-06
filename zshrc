@@ -30,6 +30,7 @@ alias gcl="git clone"
 alias tf="terraform"
 alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
+alias vv="vim ~/.vimrc"
 
 # Rbenv
 eval "$(rbenv init -)"
