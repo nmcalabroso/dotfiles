@@ -15,6 +15,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.iterm2_shell_integration.zsh
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
