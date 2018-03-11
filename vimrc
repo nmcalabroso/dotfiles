@@ -31,8 +31,12 @@ let g:airline_solarized_bg='dark'
 let g:airline_powerline_fonts=1
 
 " NERDTree
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeAutoDeleteBuffer = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd VimEnter * wincmd p
+
 
 " Functions
 function! TrimWhiteSpace()
@@ -60,6 +64,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_elixir_checkers=['elixir']
 let g:syntastic_enable_elixir_checker=1
+let g:syntastic_enable_ruby_checker=1
 let g:syntastic_html_checkers=['']
 
 " CtrlP
@@ -68,4 +73,3 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_max_files=0
-
