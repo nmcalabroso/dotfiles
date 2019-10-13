@@ -12,5 +12,5 @@ Personal customization for my current operating system
 
 ## Terminal
 1. Download iterm2-zsh [integration script](https://www.iterm2.com/documentation-shell-integration.html).
-2. Copy `zshrc` to `~/.zshrc`.
-3. 
+2. Import `iterm2_profile.json` into iterm.
+3. Copy `zshrc` to `~/.zshrc`.
