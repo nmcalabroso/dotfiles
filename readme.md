@@ -14,3 +14,15 @@ Personal customization for my current operating system
 1. Download iterm2-zsh [integration script](https://www.iterm2.com/documentation-shell-integration.html).
 2. Import `iterm2_profile.json` into iterm.
 3. Copy `zshrc` to `~/.zshrc`.
+4. Restart terminal.
+
+## Vim
+1. Install [vim-pathogen](https://github.com/tpope/vim-pathogen).
+2. Install [vim-solarized](https://github.com/altercation/vim-colors-solarized).
+3. Install [vim-airline](https://github.com/vim-airline/vim-airline) and its [themes](https://github.com/vim-airline/vim-airline-themes).
+4. Install [vim-NERDTree](https://github.com/scrooloose/nerdtree).
+5. Install [ack](https://beyondgrep.com/install/).
+6. Install [ctrp.vim](https://github.com/kien/ctrlp.vim).
+7. Install [syntastic](https://github.com/vim-syntastic/syntastic#installpathogen).
+8. Install [greplace.vim](https://github.com/skwp/greplace.vim).
+9. Copy `vimrc` to `~/.vimrc`.
