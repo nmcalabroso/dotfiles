@@ -1,0 +1,5 @@
+.env.production
+google_drive_credential.json
+*.swp
+*.swo
+
