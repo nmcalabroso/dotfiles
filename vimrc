@@ -32,7 +32,6 @@ let g:airline_powerline_fonts=1
 
 " NERDTree
 let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeMinimalUI = 1
 let NERDTreeAutoDeleteBuffer = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd VimEnter * wincmd p
@@ -48,6 +47,7 @@ map <C-\> :NERDTreeToggle<CR>
 map <S-l> :tabn<CR>
 map <S-h> :tabp<CR>
 map <S-k> :tabnew<CR>
+map <leader>C :CtrlPClearCache<cr>
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
@@ -73,3 +73,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_max_files=0
+
+" GSearch
+set grepprg=ack
+let g:grep_cmd_opts = '--noheading'
