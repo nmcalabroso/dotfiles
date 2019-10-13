@@ -15,6 +15,9 @@ Personal customization for my current operating system
 2. Import `iterm2_profile.json` into iterm.
 3. Copy `zshrc` to `~/.zshrc`.
 4. Restart terminal.
+5. To avoid dimming inactive tabs, go to Preferences > Appearance > Dimming.
+6. To remove title bars for panes, go to Preferences > Appearance > Panes.
+7. To remove title bars for tabs, go to Preferences > Apperannce > Tabs.
 
 ## Vim
 1. Install [vim-pathogen](https://github.com/tpope/vim-pathogen).
