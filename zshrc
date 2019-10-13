@@ -1,6 +1,9 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/Users/moneysmartsingapore/.oh-my-zsh
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+export CLICOLOR=1
+export TERM=xterm-256color
 
 ZSH_THEME="agnoster"
 
@@ -11,7 +14,6 @@ plugins=(
   git
   osx
   ruby
-  elixir
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -19,7 +21,6 @@ source ~/.iterm2_shell_integration.zsh
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
-export PATH=$PATH:~/.rbenv/shims
 
 # Alias
 alias v=vim
@@ -33,10 +34,3 @@ alias tf="terraform"
 alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
 alias vv="vim ~/.vimrc"
-
-# Rbenv
-eval "$(rbenv init -)"
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
