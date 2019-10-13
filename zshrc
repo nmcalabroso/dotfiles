@@ -1,5 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+DEFAULT_USER=$(whoami)
 export ZSH=/Users/moneysmartsingapore/.oh-my-zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 export CLICOLOR=1
